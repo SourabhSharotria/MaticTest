@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Ay1-qJ-Y5m">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="FMd-lp-5Yd" customClass="HomeViewController" customModule="MaticDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oda-8T-anO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LMD-AP-77m">
+                                <rect key="frame" x="0.0" y="164" width="414" height="698"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FMd-lp-5Yd" id="Dem-IP-U3T"/>
+                                    <outlet property="delegate" destination="FMd-lp-5Yd" id="XdG-VZ-fAS"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="reJ-pG-hCh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtG-bJ-twr">
+                                        <rect key="frame" x="162" y="35" width="90" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="dXI-hC-ngq"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="rup-EM-uma"/>
+                                        </constraints>
+                                        <state key="normal" title="Show Hash">
+                                            <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showHashClicked:" destination="FMd-lp-5Yd" eventType="touchUpInside" id="ZXJ-JK-vrH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="jtG-bJ-twr" firstAttribute="centerY" secondItem="reJ-pG-hCh" secondAttribute="centerY" id="MpG-mr-FwB"/>
+                                    <constraint firstItem="jtG-bJ-twr" firstAttribute="centerX" secondItem="reJ-pG-hCh" secondAttribute="centerX" id="ir2-Db-ds1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i7h-sf-8ch" firstAttribute="trailing" secondItem="LMD-AP-77m" secondAttribute="trailing" id="Gco-xw-7RH"/>
+                            <constraint firstItem="LMD-AP-77m" firstAttribute="leading" secondItem="i7h-sf-8ch" secondAttribute="leading" id="Ns7-ZV-1HY"/>
+                            <constraint firstItem="reJ-pG-hCh" firstAttribute="leading" secondItem="i7h-sf-8ch" secondAttribute="leading" id="Uxx-fI-5F5"/>
+                            <constraint firstItem="reJ-pG-hCh" firstAttribute="top" secondItem="i7h-sf-8ch" secondAttribute="top" id="Zvd-uX-BFj"/>
+                            <constraint firstItem="i7h-sf-8ch" firstAttribute="bottom" secondItem="LMD-AP-77m" secondAttribute="bottom" id="aWW-Sm-auO"/>
+                            <constraint firstItem="i7h-sf-8ch" firstAttribute="trailing" secondItem="reJ-pG-hCh" secondAttribute="trailing" id="hQd-Pu-5QI"/>
+                            <constraint firstItem="LMD-AP-77m" firstAttribute="top" secondItem="reJ-pG-hCh" secondAttribute="bottom" id="tRK-To-0hM"/>
+                            <constraint firstItem="LMD-AP-77m" firstAttribute="top" secondItem="i7h-sf-8ch" secondAttribute="top" constant="120" id="tw8-3g-tfg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i7h-sf-8ch"/>
+                    </view>
+                    <connections>
+                        <outlet property="currencyTableView" destination="LMD-AP-77m" id="axO-po-k4n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tSV-X5-ptb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2660.8695652173915" y="-5.3571428571428568"/>
+        </scene>
+    </scenes>
+</document>
