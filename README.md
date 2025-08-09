@@ -10,26 +10,22 @@ The system is organized into distinct layers, each with a specific responsibilit
 1.1. View Layer
 
 Responsibilities:
-
 Displays the UI elements that the user interacts with.
 Renders real-time shot data, including shot trajectories and player movements.
 Handles user input, such as tapping or rotating the court.
 
 Key Tasks:
-
 Rendering: Updates the UI with data received from the ViewModel.
 User Input: Captures user gestures and triggers corresponding actions in the ViewModel.
 
 1.2. ViewModel Layer
 
 Responsibilities:
-
 Acts as the bridge between the Data Layer (Model) and the View Layer.
 Processes and exposes live data from the Data Layer for the View to display.
 Manages the business logic, such as calculating animations and reacting to user input.
 
 Key Tasks:
-
 Data Transformation: Formats raw data into a usable structure for the View.
 
 Real-time Updates: Publishes updates to the View based on incoming data.
@@ -39,7 +35,6 @@ Error Handling: Manages issues with data fetching and provides fallback options.
 1.3. Data Layer (Model)
 
 Responsibilities:
-
 Fetches data from the backend (real-time shots, player stats, etc.).
 
 Parses and structures raw data into our internal data models.
@@ -47,7 +42,6 @@ Parses and structures raw data into our internal data models.
 Handles data persistence and caching.
 
 Key Tasks:
-
 Network Communication: Connects to the backend to fetch live shot data.
 
 Data Parsing: Converts raw data (e.g., JSON) into structured data models.
@@ -63,11 +57,9 @@ Updates the UI dynamically based on real-time data from the ViewModel and Render
 1.4.1 Rendering Layer
 
 Responsibilities:
-
 Handles the 3D graphical rendering of all visual elements in the app, including the basketball court, player models, and shot trajectories.
 
 Key Tasks:
-
 3D Rendering: Renders the court, players, and shots in a 3D space using SceneKit.
 
 Animation: Manages animations for shots, player movements, and other dynamic visual elements.
@@ -77,11 +69,9 @@ Camera Control: Adjusts the camera angle and zoom based on user interactions and
 1.4.2 View Layer
 
 Responsibilities:
-
 Displays static and dynamic content such as player statistics, shot data, visual representations of the basketball court, etc. while updating in real-time based on data from the ViewModel and Rendering Layer.
 
 Key Tasks:
-
 Renders static elements like the court layout and player avatars.
 Dynamically update view eg: update View as new shot data and player positions arrive from the ViewModel.
 Handles user gestures (e.g., tapping, rotating the view) and passes them to the ViewModel for further action.
